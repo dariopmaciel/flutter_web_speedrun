@@ -4,7 +4,8 @@ import 'package:flutter_web_speedrun/app/core/local_storage/local_storage.dart';
 class LocalSecureStorageImpl implements LocalSecureStorage{
 
 
-  
+* buscar o sharedpref
+
   @override
   Future<void> clear() {
     // TODO: implement clear
