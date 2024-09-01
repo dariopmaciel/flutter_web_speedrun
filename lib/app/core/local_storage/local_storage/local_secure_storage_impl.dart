@@ -5,29 +5,18 @@ class LocalSecureStorageImpl implements LocalSecureStorage {
   FlutterSecureStorage get _instance => FlutterSecureStorage();
 
   @override
-  Future<void> clear() =>
+  Future<void> clear() => _instance.deleteAll();
 
   @override
-  Future<bool> contains(String key) {
-    // TODO: implement contains
-    throw UnimplementedError();
-  }
+  Future<bool> contains(String key) => _instance.containsKey(key: key);
 
   @override
-  Future<String?> read(String key) {
-    // TODO: implement read
-    throw UnimplementedError();
-  }
+  Future<String?> read(String key) => _instance.read(key: key);
 
   @override
-  Future<void> remove(String key) {
-    // TODO: implement remove
-    throw UnimplementedError();
-  }
+  Future<void> remove(String key) => _instance.delete(key: key);
 
   @override
-  Future<void> write(String key, String valor) {
-    // TODO: implement write
-    throw UnimplementedError();
-  }
+  Future<void> write(String key, String valor) =>
+      _instance.write(key: key, value: valor);
 }
