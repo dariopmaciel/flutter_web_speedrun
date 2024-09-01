@@ -1,14 +1,11 @@
-
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:flutter_web_speedrun/app/core/local_storage/local_storage.dart';
-import 'package:localse';
 
+class LocalSecureStorageImpl implements LocalSecureStorage {
+  FlutterSecureStorage get _instance => FlutterSecureStorage();
 
-class LocalSecureStorageImpl implements LocalSecureStorage{
-
-// LocalSecureStorage get _instance =>  LocalSecureStorage();
-// buscar o sharedpref
-
-  
+  @override
+  Future<void> clear() =>
 
   @override
   Future<bool> contains(String key) {
@@ -33,11 +30,4 @@ class LocalSecureStorageImpl implements LocalSecureStorage{
     // TODO: implement write
     throw UnimplementedError();
   }
-  
-  @override
-  Future<void> clear() {
-    // TODO: implement clear
-    throw UnimplementedError();
-  }
-  
 }
